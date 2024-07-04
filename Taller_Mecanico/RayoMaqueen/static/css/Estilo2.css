@@ -1,0 +1,160 @@
+.carrusel {
+    max-width: 800px; /* Establece el ancho máximo del carrusel */
+    margin: 0 auto; /* Centra horizontalmente el carrusel */
+}
+
+body {
+    background-image: url('../fondo/fondo.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    font-family: sans-serif;
+    background-color: #f8f9fa;
+}
+
+h1 {
+    color: white;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.ps {
+    color: white;
+    font-size: 1rem;
+}
+
+.fuente-titulo {
+    font-size: 2rem;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+main {
+    width: 100%;
+    padding: 20px;
+    margin: auto;
+    margin-top: 100px;
+}
+
+.row {
+    color: rgba(252, 249, 249, 0.491);
+}
+
+h2 {
+    color: rgba(181, 147, 147, 0.491);
+}
+
+.container {
+    width: 90%; /* Reducir el ancho del contenedor */
+    max-width: 1180px;
+    margin: auto; /* Centrar el contenedor en la página */
+    display: flex;
+    flex-wrap: wrap; /* Ajustar al contenido */
+    justify-content: center; /* Centrar horizontalmente los elementos */
+}
+
+.card {
+    width: calc(33.33% - 40px); /* Reducir el ancho de cada tarjeta y dejar espacio para el margen */
+    margin: 20px; /* Ajustar el margen entre las tarjetas */
+    border-radius: 6px;
+    overflow: hidden;
+    background: #fff;
+    box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: all 400ms ease;
+    box-sizing: border-box; /* Asegurar que el margen se tenga en cuenta para el ancho */
+}
+
+.card:hover {
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.4);
+    transform: translateY(-3%);
+}
+
+.card img {
+    width: 100%;
+    height: 210px;
+}
+
+.card .contenido {
+    padding: 15px;
+    text-align: center;
+}
+
+.card .contenido p {
+    line-height: 1.5;
+    color: #6a6a6a;
+}
+
+.card .contenido h3 {
+    font-weight: 400;
+    margin-bottom: 15px;
+}
+
+.card .contenido a {
+    text-decoration: none;
+    display: inline-block;
+    padding: 10px;
+    margin-top: 10px;
+    color: #2fb4cc;
+    border: 1px solid #2fb4cc;
+    border-radius: 4px;
+    transition: all 400ms ease;
+}
+
+.card .contenido a:hover {
+    background: #2fb4cc;
+    color: #fff;
+}
+
+/* Formulario */
+.registroCont {
+    width: 60%; /* Ajusta el ancho al 60% */
+    max-width: 700px; /* Máximo ancho para pantallas más grandes */
+    background-color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    margin: 0 auto;
+}
+
+.form-label {
+    font-weight: bold;
+    color: #555;
+    font-size: 14px; /* Reduce el tamaño de la etiqueta */
+}
+
+.form-control {
+    border-radius: 5px;
+    border: 1px solid #ced4da;
+    font-size: 14px; /* Reduce el tamaño del texto de entrada */
+    padding: 5px; /* Reduce el padding */
+}
+
+.form-check-input {
+    margin-top: 0.3rem;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    border: none;
+    padding: 8px; /* Reduce el padding del botón */
+    font-size: 14px; /* Reduce el tamaño del texto del botón */
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+}
+
+.popover {
+    max-width: 200px; /* Ancho máximo para el popover */
+}
+
+.popover-body {
+    font-size: 0.875rem; /* Tamaño de letra */
+}
+

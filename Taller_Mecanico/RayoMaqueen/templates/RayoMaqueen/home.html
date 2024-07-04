@@ -1,0 +1,59 @@
+{% extends "RayoMaqueen/header.html" %}
+{% load static %}
+
+{% block content %}
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        margin: 0;
+        padding: 0;
+    }
+
+    .home-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 40vh;
+        
+        color: #fff;
+        padding: 10px; /* Ajuste de padding reducido */
+        text-align: center;
+        box-sizing: border-box; /* Para incluir padding en la altura */
+    }
+
+    .home-container h1 {
+        color: #007BFF;
+        font-size: 2em;
+        margin-bottom: 10px;
+    }
+
+    .home-container a {
+        display: inline-block;
+        background-color: #007BFF;
+        color: #fff;
+        padding: 10px 20px;
+        border-radius: 5px;
+        text-decoration: none;
+        transition: background-color 0.3s ease;
+        margin-top: 10px;
+    }
+
+    .home-content {
+        max-width: 50%; /* Ancho máximo ajustado a la mitad */
+        margin: 0 auto; /* Centrado horizontal */
+    }
+
+    .home-container a:hover {
+        background-color: #0056b3;
+    }
+</style>
+
+<div class="home-container">
+    <div class="home-content">
+        <h1>Página de Inicio</h1><br>
+        <a href="{% url 'login' %}">Iniciar Sesión</a>
+    </div>
+</div>
+{% endblock %}

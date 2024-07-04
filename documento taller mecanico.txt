@@ -1,0 +1,58 @@
+
+
+Especificación de Requisitos de Software (ERS) - Taller "Rayo Makween"
+
+1. Introducción
+   - Propósito del Documento:Este documento establece los requisitos y especificaciones del sistema de gestión para el taller de reparación de vehículos "Rayo Makween".
+   - Objetivos del Proyecto:Describir las metas y funcionalidades clave que se esperan del software desarrollado para el taller.
+
+2. Descripción General del Sistema
+   - Contexto del Taller "Rayo Makween":Este taller se especializa en reparaciones mecánicas y mantenimiento de vehículos de motor.
+   - Funcionalidades Principales:
+   - Gestión de clientes y vehículos.
+   - Programación de citas para servicios.
+   - Seguimiento y registro de órdenes de trabajo.
+   - Control de inventario de repuestos y materiales.
+   - Generación de facturas y recibos.
+   - Reportes de desempeño y estadísticas.
+
+3. Requisitos Funcionales
+   - RF1: Gestión de Clientes y Vehículos
+   - Descripción: El sistema debe permitir registrar, actualizar y buscar clientes y sus vehículos.
+   - Criterios de Éxito: Capacidad para añadir y editar información de clientes y vehículos de manera eficiente.
+   - Prioridad: Alta
+   - RF2: Programación de Citas
+   - Descripción: Los usuarios deben poder programar citas para servicios de mantenimiento o reparación.
+   - Criterios de Éxito: Interfaz de calendario intuitiva para visualizar y gestionar citas.
+   - Prioridad: Alta
+   - Incluir más requisitos funcionales según las necesidades específicas del taller "Rayo Makween".
+
+4. Requisitos No Funcionales
+   - RNF1: Seguridad de Datos
+   - Descripción: Los datos de clientes y transacciones deben estar protegidos mediante métodos de cifrado.
+   - Criterios de Cumplimiento: Cumplimiento de estándares de seguridad de la industria.
+   - Prioridad: Alta
+   - RNF2: Usabilidad
+   - Descripción: La interfaz de usuario debe ser fácil de usar para técnicos y personal administrativo.
+   - Criterios de Cumplimiento: Evaluación de usabilidad mediante pruebas con usuarios.
+   - Prioridad: Media
+   - Incluir más requisitos no funcionales como rendimiento, escalabilidad, mantenibilidad, etc.
+
+5. Diagrama de Arquitectura
+   - Diagrama de Componentes: Representación visual de la arquitectura propuesta del sistema (front-end, back-end, base de datos, integraciones).
+   - Descripción: Explicación detallada de la estructura y tecnologías utilizadas en el sistema del taller "Rayo Makween".
+
+6. Casos de Uso
+   - CU1: Registro de Cliente
+   - Descripción: Proceso de registro de un nuevo cliente en el sistema.
+   - Actores: Recepcionista, técnico.
+   - Flujo Principal: Captura de datos del cliente, asignación de vehículos.
+   - CU2: Programación de Cita
+   - Descripción: Proceso para programar una cita de servicio.
+   - Actores: Cliente, personal del taller.
+   - Flujo Principal: Selección de servicio, fecha y hora de la cita.
+   - Agregar más casos de uso relevantes para las operaciones del taller "Rayo Makween".
+7. Anexos
+   - Glosario de Términos: Definiciones de términos técnicos utilizados en el documento.
+   - Referencias: Documentos de referencia o fuentes utilizadas en la elaboración de la ERS.
+

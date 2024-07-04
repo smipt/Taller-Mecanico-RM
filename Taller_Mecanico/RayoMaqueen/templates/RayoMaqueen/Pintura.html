@@ -1,0 +1,58 @@
+{% extends "RayoMaqueen/header.html" %}
+{% load static %}
+
+  {% block content %}
+        <section class="container mt-5">
+            <div class="row">
+                <div class="col-5">
+                    <h1 class="fw-bold text-white fuente-titulo">1. Servicio de Pintura Automotriz</h1>
+                    <p>Mecánico: Claudio Contreras</p>
+                    <p>Fecha: 10 de febrero de 2024</p>
+                    <p>Detalles: Transformación estética con acabados precisos y duraderos.</p>
+                    <p>Materiales Utilizados: Pinturas de alta calidad y técnicas avanzadas.</p>
+
+                </div>
+                <div class="col-5">
+                    <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                          <div class="carousel-item active">
+                            <img src="{% static 'img/pintura1.jpg' %}" class="d-block w-100" alt="...">
+                            
+                          </div>
+                          <div class="carousel-item">
+                            <img src="{% static 'img/pintura2.jpg' %}" class="d-block w-100" alt="...">
+                            
+                          </div>
+                          <div class="carousel-item">
+                            <img src="{% static 'img/pintura3.jpg' %}" class="d-block w-100" alt="...">
+                            
+                          </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                        </button>
+                      </div>
+
+                </div>
+                
+            </div>
+            
+
+        </section>
+        <br>
+        <br>
+        <a href="{% url 'Principal' %}" class="btn text-white">Atras</a>
+        {% endblock %}
+        
+        
+        
+
+    
+   
+    
+ 

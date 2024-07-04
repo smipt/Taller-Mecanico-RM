@@ -1,0 +1,19 @@
+Para copiar un proyecto que esté en un entorno virtual, debemos copiar el proyecto sin la carpeta myvenv, ya que,
+esta es donde se encuentra el entorno virtual, primero realizamos los pasos a continuacion y finalmente copiamos
+el proyecto, todas las librerias ya instaladas previamente,quedan guardads en el archivo requirements.txt, 
+el comando para almacenar estas configuraciones es: pip freeze > requirements.txt.
+NOTA: Todo esto se ejecuta en la carpeta del proyecto, por ejemplo:  
+C:\Users\ccane\OneDrive\Escritorio\Carpeta Proyecto
+
+1-Crea y activa un nuevo entorno virtual:
+py -m venv myvenv
+
+myvenv\Scripts\activate  
+
+2- Instala las dependencias:
+pip install -r requirements.txt
+
+3- Copiar todos los archivos, menos la carpeta myvenv
+
+4- Ejecutar el servidor
+python manage.py runserver  

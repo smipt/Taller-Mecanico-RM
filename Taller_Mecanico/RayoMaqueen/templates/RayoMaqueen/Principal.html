@@ -1,0 +1,229 @@
+{% extends "RayoMaqueen/header.html" %}
+{% load static %}
+
+{% block title %}Principal{% endblock %}
+
+
+{% block content %}
+<div id="carouselExampleCaptions" class="carousel slide carrusel">
+  <div class="carousel-indicators">
+    <button
+      type="button"
+      data-bs-target="#carouselExampleCaptions"
+      data-bs-slide-to="0"
+      class="active"
+      aria-current="true"
+      aria-label="Slide 1"
+    ></button>
+    <button
+      type="button"
+      data-bs-target="#carouselExampleCaptions"
+      data-bs-slide-to="1"
+      aria-label="Slide 2"
+    ></button>
+    <button
+      type="button"
+      data-bs-target="#carouselExampleCaptions"
+      data-bs-slide-to="2"
+      aria-label="Slide 3"
+    ></button>
+  </div>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img
+        src="{% static 'img/pintura.jpg' %}"
+        class="d-block w-100"
+        width="900"
+        height="450"
+      />
+      <div class="carousel-caption d-none d-md-block">
+        <li>
+          <a class="btn btn-primary px-4 py-2 fs-5 mt-5" href="{% url 'Pintura' %}"
+            >PINTURA</a
+          >
+        </li>
+        <p>Transforma tu auto con arte: Colores que inspiran belleza.</p>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img
+        src="{% static 'img/frenos.jpg' %}"
+        class="d-block w-100"
+        width="900"
+        height="450"
+      />
+      <div class="carousel-caption d-none d-md-block">
+        <li>
+          <a class="btn btn-primary px-4 py-2 fs-5 mt-5" href="{% url 'Frenos' %}"
+            >FRENOS</a
+          >
+        </li>
+        <p>Detén el tiempo con estilo: Frenos que deslumbran y protegen.</p>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img
+        src="{% static 'img/aceite.jpg' %}"
+        class="d-block w-100"
+        width="900"
+        height="450"
+      />
+      <div class="carousel-caption d-none d-md-block">
+        <li>
+          <a
+            class="btn btn-primary px-4 py-2 fs-5 mt-5"
+            href="{% url 'Mantención' %}"
+            >MANTENCIÓN</a
+          >
+        </li>
+        <p>
+          Preserva el rendimiento: Mantención vehicular al cuidado de
+          expertos.
+        </p>
+      </div>
+    </div>
+  </div>
+  <button
+    class="carousel-control-prev"
+    type="button"
+    data-bs-target="#carouselExampleCaptions"
+    data-bs-slide="prev"
+  >
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button
+    class="carousel-control-next"
+    type="button"
+    data-bs-target="#carouselExampleCaptions"
+    data-bs-slide="next"
+  >
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+
+<fieldset>
+  <p id="segundo" style="color: aqua;">
+    Somos un taller confiable, especializado en proporcionar servicios de alta calidad y dedicación a nuestros clientes. Nos esforzamos por garantizar que tu vehículo reciba la mejor atención posible en todo momento</p>
+      
+  <p class="tercero" style="color: aqua;">
+    Agenda con nosotros tus mantenciones, y experimenta la diferencia de trabajar con profesionales comprometidos con el cuidado y el rendimiento óptimo de tu vehículo. Tu satisfacción es nuestra prioridad.</p>
+</fieldset>
+
+<br />
+<br />
+
+<div class="container">
+  <div class="card">
+    <figure>
+      <img src="{% static 'img/pintura2.jpg' %}" alt="" />
+    </figure>
+    <div class="contenido">
+      <h3>Pintura</h3>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid,
+        nostrum aspernatur molestiae officiis expedita obcaecati
+      </p>
+      <a href=""> Leer Más</a>
+    </div>
+  </div>
+  <div class="card">
+    <figure>
+      <img src="{% static 'img/frenos3.jpg' %}" alt="" />
+    </figure>
+    <div class="contenido">
+      <h3>Frenos</h3>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid,
+        nostrum aspernatur molestiae officiis expedita obcaecati
+      </p>
+      <a href=""> Leer Más</a>
+    </div>
+  </div>
+  <div class="card">
+    <figure>
+      <img src="{% static 'img/aceite.jpg' %}" alt="" />
+    </figure>
+    <div class="contenido">
+      <h3>Mantención</h3>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid,
+        nostrum aspernatur molestiae officiis expedita obcaecati
+      </p>
+      <a href=""> Leer Más</a>
+    </div>
+  </div>
+</div>
+
+<div class="container py-4">
+  <button
+    class="btn btn-primary"
+    data-bs-toggle="modal"
+    data-bs-target="#mi-modal"
+  >
+    RECLAMOS
+  </button>
+
+  <div class="modal fade" id="mi-modal" data-bs-backdrop="static">
+    <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">RECLAMOS</h5>
+          <button class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+
+        <div class="modal-body">
+          <p>PARA RECLAMOS DIRIJASE A LA SECCION DE CONTACTO</p>
+          <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Labore
+            omnis perspiciatis excepturi ullam. Tempore, corrupti recusandae
+            repudiandae aspernatur veritatis asperiores a reiciendis harum
+            laudantium? Architecto eius laborum voluptatum soluta similique.
+          </p>
+          <p>
+            Qui veniam odit perferendis exercitationem eum, debitis
+            quibusdam odio nesciunt quasi ut, voluptatem dolores cum minus
+            assumenda nulla maiores recusandae animi sunt in, laborum vitae
+            saepe iusto. Labore, tempora dolor.
+          </p>
+          <p>
+            Possimus eveniet delectus voluptate cum reiciendis, officiis
+            quidem, impedit aperiam veritatis facere, aliquam hic similique
+            dicta! Inventore autem quae placeat facere soluta similique, eum
+            qui eius dolore. Neque, tempore sed?
+          </p>
+          <p>
+            Iusto blanditiis unde veniam perspiciatis illo quidem soluta,
+            possimus quam aut? Exercitationem rem aperiam ipsum cum nostrum,
+            perferendis dolores consequatur autem error laboriosam sunt
+            natus totam. Expedita doloremque molestias libero.
+          </p>
+          <p>
+            Omnis aperiam veritatis quam autem, debitis est nesciunt quia
+            corrupti, expedita laudantium quo quas facilis natus, nihil
+            numquam in recusandae. Vel quaerat laborum dignissimos, saepe
+            dolor dolores nisi tenetur! Dolor.
+          </p>
+        </div>
+
+        <div class="modal-footer">
+          <button class="btn btn-danger" data-bs-dismiss="modal">
+            Cancelar
+          </button>
+          <button class="btn btn-primary">Guardar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container mt-5">
+  <!-- Button trigger popover -->
+  <button type="button" class="btn btn-lg btn-danger" data-bs-toggle="popover" title="HORARIO" data-bs-content="El horario de mantenciones es de lunes a viernes de 8:30 a 19:00 hrs" data-bs-trigger="focus">
+    Agendar Mantención
+  </button>
+</div>
+
+{% endblock %}
+

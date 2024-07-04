@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario Actualizar Datos</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .form-container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: left;
+            max-width: 400px;
+            width: 100%;
+        }
+        .form-container h2 {
+            text-align: center;
+            color: #007BFF;
+        }
+        .form-container form {
+            display: flex;
+            flex-direction: column;
+        }
+        .form-container form pre {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 10px 0;
+        }
+        .form-container form input[type="text"],
+        .form-container form input[type="date"],
+        .form-container form input[type="email"],
+        .form-container form select {
+            width: 65%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .form-container form input[type="submit"] {
+            background-color: #007BFF;
+            color: #fff;
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 20px;
+            transition: background-color 0.3s ease;
+        }
+        .form-container form input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+        .form-container a {
+            color: #007BFF;
+            text-decoration: none;
+            margin-top: 20px;
+            display: inline-block;
+        }
+        .form-container a:hover {
+            text-decoration: underline;
+        }
+        #idMensajes {
+            margin-top: 20px;
+            background-color: #f8d7da;
+            color: #721c24;
+            padding: 10px;
+            border: 1px solid #f5c6cb;
+            border-radius: 5px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        {% if alumno %}
+        <h2>Formulario Actualizar Datos</h2><br>
+        <form action="{% url 'alumnosUpdate' %}" method="POST">
+            {% csrf_token %}
+            <pre>Rut:               <input type="text" name="rut" value="{{alumno.rut}}"></pre>
+            <pre>Nombre:            <input type="text" name="nombre" value="{{alumno.nombre}}"></pre>         
+            <pre>Apellido P.:       <input type="text" name="paterno" value="{{alumno.apellido_paterno}}"></pre>
+            <pre>Apellido M.:       <input type="text" name="materno" value="{{alumno.apellido_materno}}"></pre>
+            <pre>Fecha Nac.:        <input type="date" name="fechaNac" value="{{alumno.fecha_nacimiento|date:'Y-m-d'}}"></pre>
+            <pre>Género:            <select name="genero">
+                {% for genero in generos %}
+                    {% if genero.genero == alumno.id_genero.genero %}
+                    <option value="{{genero.id_genero}}" selected>{{genero.genero}}</option>
+                    {% else %}
+                    <option value="{{genero.id_genero}}">{{genero.genero}}</option>
+                    {% endif %}
+                {% endfor %}
+            </select></pre>
+            <pre>Celular:           <input type="text" name="telefono" value="{{alumno.telefono}}"></pre>
+            <pre>Email:             <input type="mail" name="email" value="{{alumno.email}}"></pre>
+            <pre>Dirección:         <input type="text" name="direccion" value="{{alumno.direccion}}"></pre>
+            <input type="submit" name="opcion" value="Actualizar">
+        </form> <br><br>
+        {% endif %}
+        <div id="idMensajes">
+            {% if mensaje %}
+                {{ mensaje }}
+            {% endif %}
+        </div>
+        <br><br>
+        <a href="{% url 'crud' %}"> Volver </a>
+    </div>
+</body>
+</html>

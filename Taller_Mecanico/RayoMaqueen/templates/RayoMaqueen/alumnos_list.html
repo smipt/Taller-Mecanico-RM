@@ -1,0 +1,119 @@
+{% extends "RayoMaqueen/header.html" %}
+{% load static %}
+
+{% block content %}
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #0b0a0a;
+        color: #fff;
+        margin: 0;
+        padding: 0;
+    }
+
+    .crud-container {
+        max-width: 800px;
+        margin: 20px auto;
+        padding: 20px;
+        background-color: #1a1a1a;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    }
+
+    h1 {
+        color: #007BFF;
+        text-align: center;
+    }
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 20px;
+    }
+
+    th, td {
+        padding: 10px;
+        text-align: left;
+        border-bottom: 1px solid #333;
+    }
+
+    th {
+        background-color: #007BFF;
+        color: #fff;
+    }
+
+    td a {
+        color: #007BFF;
+        text-decoration: none;
+        margin-right: 10px;
+    }
+
+    td a:hover {
+        text-decoration: underline;
+    }
+
+    button a {
+        text-decoration: none;
+        color: #fff;
+        background-color: #007BFF;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+    button a:hover {
+        background-color: #0056b3;
+    }
+
+    #idMensajes {
+        margin-top: 10px;
+        background-color: #333;
+        color: #fff;
+        padding: 10px;
+        border-radius: 5px;
+        text-align: center;
+    }
+</style>
+
+{% if user.is_authenticated %}
+<div class="crud-container">
+    <h1>Editar Datos de Alumnos</h1>
+
+    <button type="button">
+        <a href="{% url 'alumnos_add' %}"> Agregar </a>
+    </button>
+
+    <div id="idMensajes">
+        {% if mensaje %}
+            {{ mensaje }}
+        {% endif %}
+    </div>
+
+    <table>
+        <tr>
+            <th>Rut</th>
+            <th>Nombre</th>
+            <th>Apellido P.</th>
+            <th>Eliminar</th>
+            <th>Modificar</th>
+        </tr>
+        {% for alumno in RayoMaqueen %}
+            <tr>
+                <td>{{ alumno.rut }}</td>
+                <td>{{ alumno.nombre }}</td>
+                <td>{{ alumno.apellido_paterno }}</td>
+                <td><a href="{% url 'alumnos_del' pk=alumno.rut %}">Eliminar</a></td>
+                <td><a href="{% url 'alumnos_findEdit' pk=alumno.rut %}">Modificar</a></td>
+            </tr>
+        {% endfor %}
+    </table>
+</div>
+{% else %}
+<p style="color: #fff; background-color: #007BFF; padding: 10px; border-radius: 5px;">
+    Debes iniciar sesión para ver este contenido.
+</p>
+{% endif %}
+
+{% endblock %}
